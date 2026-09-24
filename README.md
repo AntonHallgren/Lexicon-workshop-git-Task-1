@@ -42,3 +42,14 @@ git remote -v
 git push -u origin main
 ```
 After doing this I can see on that my branch has been added to the remote repository in my browser. 
+
+Then I will track my work so far
+```bash
+git status
+git add README.md
+git commit -m "Updated README.md with the process of connecting to a remote repository"
+```
+and after that clear the command prompt
+```bash
+cls
+```
