@@ -99,4 +99,80 @@ git status
 #updates .gitignore (in text editor)
 git status
 #sees that secrets.txt is no longer tracked, and .gitignore has changes
+
+#The usual procedure
+git add .
+git commit -m "Updated .gitignore so that some files are not tracked. Updated progress in README.md"
+git push
 ```
+
+Now I would like an overview about what I have done so far so I check the log
+```bash
+#writes out a list of all commits with a hash and commit message, but no further detailed information
+git log --oneline
+
+#then I clear the command promt again
+cls
+```
+
+I intend to do a bit more practice on Task 1 part 3, but first I will try to do Task 2
+
+## Task 2
+I will try to clone the repository into a new folder. I am not completely sure how this is done correctly so I will just test:
+
+```bash
+git init
+git clone https://github.com/Lexicon-Smaland/Hello-World.git
+
+```
+This seems to have been incorrect: What I get is a new folder that does itself contain a .git file, so I was perhaps not sopposed to start with git init. I will start over and see if things work that way. 
+
+```bash
+#Trying clone again
+git clone https://github.com/Lexicon-Smaland/Hello-World.git
+
+#Since the .git file is inside the folder Hello-world i assume that I should step into it. This is done with the cd command. 
+cd Hello-World
+
+#Now I want to see that things work correctly, and what is inside this repository. I do this with git log --oneline
+git log --oneline
+```
+
+This seems to have worked out correctly
+
+I should now change the remote connection to my own github account. First I create a second repository on Github. 
+
+```bash
+#checking what it looked like before
+git remote -v
+
+#This was incorect
+git remote add origin https://github.com/AntonHallgren/Lexicon-workshop-git-Task-2.git
+
+#After a quick search this seems to be the correct way, wich makes more sense. 
+git remote set-url origin https://github.com/AntonHallgren/Lexicon-workshop-git-Task-2.git
+
+#confirming that it is now correct
+git remote -v
+
+#And push. 
+git push -u origin main
+```
+
+Now I can see the content of the repository on my Github page. And I noticed that it keeps track of previous contributors, Mehrdad Javan and Simon Elbrink, wich is great. 
+
+After editing the file I commit and push. 
+
+```bash
+git status
+git add .
+git status
+git commit -m "Added description of how the table of contents in README.md is constructed using md to README.md."
+
+#Now I can push it and see the result on my github
+git push
+```
+
+Whith this, I belive task 2 is done. 
+
+## Back to Task 1
