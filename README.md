@@ -53,3 +53,50 @@ and after that clear the command prompt
 ```bash
 cls
 ```
+
+## Track changes
+I will add more files to to track changes in.
+```bash
+#Checking if git noticed that I added a new file, notes.txt
+git status
+
+#Adding all files to the staging area
+git add .
+
+#Checking that the new file is added correctly
+git status
+
+git git commit -m "Added the file notes.txt"
+```
+
+Now I will try pushing.
+
+```bash
+#sends my changes to the remote repository
+git push
+```
+And I can look at the remote repository and see that it has updated
+
+## .gitignore
+
+Before going further with adding and edditing files to have for the sake of having something to push I will start with a gitignore file
+
+
+```bash
+#The usual procedure
+git status
+git add .gitignore
+git commit -m "Created .gitignore file"
+git push
+```
+Now that I have a .gitignore file I can add a file "secrets.txt" and make sure that it is not tracked by git. 
+
+```bash
+#Creates file secrets.txt
+git status
+#See that the file is detected by git
+
+#updates .gitignore (in text editor)
+git status
+#sees that secrets.txt is no longer tracked, and .gitignore has changes
+```
