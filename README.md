@@ -176,3 +176,13 @@ git push
 Whith this, I belive task 2 is done. 
 
 ## Back to Task 1
+```bash
+git status
+git add .
+git commit -m "Updated README.md with process of Task 2"
+git push
+```
+
+I will try some parts of Task 3
+
+## Branching
