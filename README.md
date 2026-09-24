@@ -186,3 +186,64 @@ git push
 I will try some parts of Task 3
 
 ## Branching
+
+I have now tried branching. To not confuse myself, I kept note of what I did elsewhere and are adding them here afterwards. 
+
+```bash
+git status
+it add .
+git status
+git commit -m "Making sure that the latest changes to README.md are commited before I start trying branching"
+git status
+
+#I used git log --oneline as often as possible to make sure that I understand everything that happens when I create and switch between branches
+git log --oneline
+
+#Create one branch, then move to it
+git branch sideBranch1
+git checkout sideBranch1
+git log --oneline
+
+#Doing some changes to notes.txt
+git add .
+git commit -m "Adding content to notes.txt"
+
+#Creating a second branch
+git checkout main
+git log --oneline
+git branch sideBranch2
+git checkout sideBranch2
+
+#added and commited a new file
+git add .
+git commit -m "Created new file otherNotes.txt"
+git log --oneline
+
+#going back to side branch 1
+git checkout sideBranch1
+#noticing that the file added on sideBranch2 is not there, as expected
+#editing notes.txt
+git add .
+git commit -m "further changes in the notes file"
+
+#now I will try merging
+git merge sideBranch1
+git log --oneline
+
+
+git checkout sideBranch2
+#changes to document
+git add .
+git commit -m "Added text to otherNotes.txt"
+
+#now try merging the other branch
+git merge sideBranch2
+#this was a bit confusing. it took me to a different looking interface and asked me to enter a commit mesege, which was not mentioned in the instructions I was folloing. I was able to find an explaination on how to progress, and it seems like everithing resolved correctly. 
+
+#finally I delete the branches and look again on the log to see how it turned out. 
+git log --oneline
+git branch -d sideBranch1
+git branch -d sideBranch2
+git log --oneline
+
+```
