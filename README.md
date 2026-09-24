@@ -29,3 +29,16 @@ Next I will use the following commands (writing them here before I use them in t
 git add README.md
 git commit -m "Documented my actions so far in README.md and edited it to use the md format"
 ```
+## Github
+
+Created Github repository, then folowing the process from last lecture to connect it
+
+```bash
+#connect to the Github repository
+git remote add origin https://github.com/AntonHallgren/Lexicon-workshop-git-Task-1.git
+#verify
+git remote -v
+#push my branch to the remote repository
+git push -u origin main
+```
+After doing this I can see on that my branch has been added to the remote repository in my browser. 
