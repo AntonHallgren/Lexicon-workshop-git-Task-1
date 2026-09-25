@@ -247,3 +247,37 @@ git branch -d sideBranch2
 git log --oneline
 
 ```
+
+## Tagging
+Next I thought I would try tagging. It makes sense to me to put a mark on what I was able to complete during yesterdays workshop. 
+```bash
+#since I am in a new session I begin with a log command to recall where I am in the project
+git log --oneline
+
+#creating a tag for last days work. 
+git tag -a v1.0 -m "This was completed on thursday"
+
+#gives a list of all tags. Currently only one
+git tag
+
+#this writes out some information about the tag and the tagged commit, inculding all changes in the commit. It took me a little bit to figure out how to get back to the commandprompt, getting to the end of the changes did not do it. Eventually I figured out that I get back by pressing 'q' for quit. 
+git show v1.0
+
+#Testing again to confirm 'q' for quit and see if it is possible to quit early, before seeing all changes. The instructions that I was following did not mention any of this
+git show v1.0
+
+#thought this would send the tag to github, but apparantly that is not how it works
+git push
+
+#after reading a bit further I found this is how you push tags to github
+git push origin v1.0
+#and it does indeed become visible when I go to the github page. Though not in the list of commits?
+
+#checking the list of my commits again. 
+git log --oneline
+#here I do see the commit marked by the tag
+
+#clear
+cls
+```
+
